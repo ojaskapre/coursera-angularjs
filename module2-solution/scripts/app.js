@@ -36,6 +36,9 @@
         service.itemsList = [{
             name: 'Cookies', 
             quantity : 3
+        },{
+            name: 'milk', 
+            quantity : 3
         }, {
             name: 'Chips',
             quantity: 4
