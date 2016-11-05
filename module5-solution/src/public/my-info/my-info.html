@@ -1,0 +1,55 @@
+<div class="container">
+
+	<div ng-show="!{{myInfoCtrl.infoSaved}}">
+		<h4>Not Signed Up Yet. <a ui-sref="public.signup">Sign Up Now! </a> </h4>
+	</div>
+	<div ng-show="{{myInfoCtrl.infoSaved}}">
+	    <h3> Your registered details: </h3>
+    <div class="row">
+		<div class="col-sm-3">
+			<label>First Name:</label>
+			<label>{{myInfoCtrl.registeredInfo.firstName}}</label>
+        </div>
+		<div class="col-sm-3">
+			<label>Last Name:</label>
+			<label>{{myInfoCtrl.registeredInfo.lastName}}</label>
+		</div>
+    </div>
+    
+    <div class="row">
+		<div class="col-sm-3">
+			<label>Email:</label>
+			<label>{{myInfoCtrl.registeredInfo.email}}</label>
+		</div>
+		<div class="col-sm-3">
+			<label>Phone:</label>
+			<label>{{myInfoCtrl.registeredInfo.phone}}</label>
+		</div>
+    </div>
+    
+    <div class="row">
+		<div class="col-sm-3">
+			<label>Favorite Dish Code:</label>
+			<label>{{myInfoCtrl.registeredInfo.favMenu}}</label>
+		</div>
+		<div class="col-sm-3">
+			<label>Favorite Dish Name:</label>
+			<label>{{myInfoCtrl.registeredInfo.menuItem.name}}</label>
+		</div>
+		<div class="col-sm-3">
+			<label>Favorite Dish Description:</label>
+			<label>{{myInfoCtrl.registeredInfo.menuItem.description}}</label>
+		</div>
+		<div class="col-sm-3">		
+		 <img class="img-responsive" width="250" height="150" 
+		 ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.registeredInfo.menuItem.short_name}}.jpg" 
+		 alt="{{myInfoCtrl.registeredInfo.menuItem.name}}">
+		</div>
+    </div>
+		
+    <div class="row">       
+      <button class="btn btn-primary"  ng-click="myInfoCtrl.okay()">OK</button>
+    </div>
+	
+    </div>
+</div>
